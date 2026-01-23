@@ -28,36 +28,34 @@ export default function Navigation() {
         isScrolled ? 'bg-forest-deep/80 backdrop-blur-md' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-6 py-12">
-        <div className="flex flex-col items-center gap-8">
-          {/* Logo - 3x larger (from h-32 to h-96) and white */}
-          <div className="flex items-center">
-            <Image
-              src="/images/logo.png"
-              alt="Skogbunn Mikromusheri"
-              width={6000}
-              height={1800}
-              className="h-96 w-auto brightness-0 invert"
-              priority
-              style={{ filter: 'brightness(0) invert(1)' }}
-            />
-          </div>
+      <div className="container mx-auto px-6 py-12 relative">
+        {/* Logo - Top left, 3x larger and white */}
+        <div className="absolute top-12 left-6">
+          <Image
+            src="/images/logo.png"
+            alt="Skogbunn Mikromusheri"
+            width={6000}
+            height={1800}
+            className="h-96 w-auto brightness-0 invert"
+            priority
+            style={{ filter: 'brightness(0) invert(1)' }}
+          />
+        </div>
 
-          {/* Navigation Buttons - Centered below logo */}
-          <div className="flex gap-8">
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-base font-merriweather font-light"
-            >
-              Om Skogbunn
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-base font-merriweather font-light"
-            >
-              Kontakt
-            </button>
-          </div>
+        {/* Navigation Buttons - Centered at top */}
+        <div className="flex justify-center gap-8">
+          <button
+            onClick={() => scrollToSection('about')}
+            className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-lg font-merriweather font-light"
+          >
+            Om Skogbunn
+          </button>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-lg font-merriweather font-light"
+          >
+            Kontakt
+          </button>
         </div>
       </div>
     </nav>
