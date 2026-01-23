@@ -9,10 +9,10 @@ export default function ContactSection() {
       <div className="flex-1 flex items-center justify-center px-6">
         <div className="container mx-auto max-w-4xl">
           <div className="text-center">
-            <h2 className="text-4xl md:text-5xl font-light text-cream mb-8 tracking-wide">
+            <h2 className="text-4xl md:text-5xl font-merriweather font-light text-cream mb-8 tracking-wide">
               Kontakt
             </h2>
-            <div className="space-y-6 text-lg text-cream/90 leading-relaxed">
+            <div className="space-y-6 text-lg text-cream/90 leading-relaxed font-merriweather font-light">
               <p>
                 Ta gjerne kontakt for mer informasjon.
               </p>
