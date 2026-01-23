@@ -28,30 +28,31 @@ export default function Navigation() {
         isScrolled ? 'bg-forest-deep/80 backdrop-blur-md' : 'bg-transparent'
       }`}
     >
-      <div className="container mx-auto px-6 py-4 flex items-center justify-between">
-        {/* Logo */}
+      <div className="container mx-auto px-6 py-8 flex items-center justify-between">
+        {/* Logo - 10x larger and white */}
         <div className="flex items-center">
           <Image
             src="/images/logo.png"
             alt="Skogbunn Mikromusheri"
-            width={200}
-            height={60}
-            className="h-12 w-auto"
+            width={2000}
+            height={600}
+            className="h-32 w-auto brightness-0 invert"
             priority
+            style={{ filter: 'brightness(0) invert(1)' }}
           />
         </div>
 
-        {/* Navigation Buttons */}
+        {/* Navigation Buttons - Merriweather font */}
         <div className="flex gap-8">
           <button
             onClick={() => scrollToSection('about')}
-            className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-sm uppercase tracking-wider font-light"
+            className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-base font-merriweather font-light"
           >
             Om Skogbunn
           </button>
           <button
             onClick={() => scrollToSection('contact')}
-            className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-sm uppercase tracking-wider font-light"
+            className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-base font-merriweather font-light"
           >
             Kontakt
           </button>
