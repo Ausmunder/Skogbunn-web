@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -30,9 +31,14 @@ export default function Navigation() {
       <div className="container mx-auto px-6 py-4 flex items-center justify-between">
         {/* Logo */}
         <div className="flex items-center">
-          <h1 className="text-cream text-2xl font-light tracking-wider">
-            SKOGBUNN
-          </h1>
+          <Image
+            src="/images/logo.png"
+            alt="Skogbunn Mikromusheri"
+            width={200}
+            height={60}
+            className="h-12 w-auto"
+            priority
+          />
         </div>
 
         {/* Navigation Buttons */}
