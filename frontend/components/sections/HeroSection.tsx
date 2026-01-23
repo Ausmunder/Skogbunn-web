@@ -32,10 +32,10 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/40 via-transparent to-forest-deep/60" />
 
       {/* Navigation - Logo and Buttons */}
-      <div className="absolute left-0 right-0 z-[60]" style={{ top: '50px' }}>
-        <div className="w-full flex flex-col items-center">
-          {/* Logo - Centered at top, 30% larger */}
-          <div style={{ width: '1170px', height: '351px' }}>
+      <div className="absolute left-0 right-0 z-[60]" style={{ top: '80px' }}>
+        <div className="w-full flex flex-col items-center px-6">
+          {/* Logo - Centered at top */}
+          <div className="relative" style={{ width: '800px', height: '240px', maxWidth: '90vw' }}>
             <Image
               src="/images/logo.png"
               alt="Skogbunn Mikromusheri"
@@ -46,8 +46,8 @@ export default function HeroSection() {
             />
           </div>
 
-          {/* Navigation Buttons - Centered below logo, 100px spacing */}
-          <div className="flex justify-center gap-8" style={{ marginTop: '100px' }}>
+          {/* Navigation Buttons - Centered below logo, 60px spacing */}
+          <div className="flex justify-center gap-8" style={{ marginTop: '60px' }}>
             <button
               onClick={() => scrollToSection('about')}
               className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-xl font-merriweather font-light"
