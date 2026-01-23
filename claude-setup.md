@@ -504,5 +504,140 @@ git push origin master
 
 ---
 
+## Website Design Implementation
+
+### Current Design (January 23, 2026)
+
+**Live Development**: Website fully implemented with Next.js and modern design
+
+#### Design Features
+
+**Layout**:
+- Full-screen scroll-snap sections (Hero, About, Contact)
+- Smooth scrolling between sections
+- Responsive design for mobile, tablet, and desktop
+
+**Navigation**:
+- Large white logo positioned top left (h-96 / 384px height)
+- Centered navigation buttons at top: "Om Skogbunn" and "Kontakt"
+- Smooth scroll to sections on click
+- Transparent background with backdrop blur on scroll
+- Merriweather font for navigation buttons (text-lg)
+
+**Color Scheme** (Skogbunn Palette):
+```css
+--forest-deep: #1a2418      /* Dark forest green */
+--moss-green: #2d3a28       /* Moss green */
+--bark-brown: #3d2e1f       /* Bark brown */
+--chanterelle-gold: #c4913b /* Mushroom gold */
+--mist-grey: rgba(200, 210, 215, 0.3)
+--twilight-blue: #4a5568
+--cream: #f5f0e8            /* Light cream background */
+```
+
+**Typography**:
+- Primary: Geist Sans (Next.js default)
+- Navigation: Merriweather (Google Fonts) - weights 300, 400, 700
+- Monospace: Geist Mono
+
+**Images**:
+- Hero background: Beautiful oyster mushroom photo (`/images/hero-bg.png`)
+- Logo: Skogbunn Mikromusheri in stylish handwritten font (`/images/logo.png`)
+- Both optimized with Next.js Image component
+
+#### Component Structure
+
+```
+frontend/
+├── app/
+│   ├── layout.tsx          # Root layout with fonts and metadata
+│   ├── page.tsx            # Main page with all sections
+│   └── globals.css         # Global styles and color palette
+├── components/
+│   ├── Navigation.tsx      # Sticky navigation with logo and buttons
+│   ├── Footer.tsx          # Footer with "skogbunn 2026"
+│   └── sections/
+│       ├── HeroSection.tsx     # Full-screen hero with background image
+│       ├── AboutSection.tsx    # About content section
+│       └── ContactSection.tsx  # Contact information section
+└── public/
+    └── images/
+        ├── hero-bg.png     # Oyster mushroom background
+        └── logo.png        # Skogbunn logo (converted to white via CSS)
+```
+
+#### Technical Implementation
+
+**Scroll Behavior**:
+```css
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+}
+```
+
+**Navigation Positioning**:
+- Logo: `absolute top-12 left-6` with white color filter
+- Buttons: `flex justify-center` for horizontal centering
+- Background: Transparent → blur on scroll
+
+**Image Optimization**:
+- Next.js Image component with `priority` for hero
+- Automatic WebP conversion
+- Responsive sizing
+
+### Development Commands
+
+**Start development server**:
+```bash
+cd frontend
+npm run dev
+```
+Access at: `http://localhost:3000`
+
+**Build for production**:
+```bash
+cd frontend
+npm run build
+```
+
+**Preview production build**:
+```bash
+npx serve out
+```
+
+### Current Status
+
+- ✅ Project initialized with Next.js 16 and Express
+- ✅ Git repository created and configured
+- ✅ GitHub repository created: `https://github.com/Ausmunder/Skogbunn-web`
+- ✅ All commits pushed to GitHub
+- ✅ Server access verified (SFTP only)
+- ✅ SSL confirmed active
+- ✅ Website design fully implemented
+- ✅ Images added (hero background and logo)
+- ✅ Navigation fully functional with scroll-to-section
+- ✅ Color palette and typography configured
+- ⏳ Content for About and Contact sections pending
+- ⏳ First deployment to skogbunn.com pending
+
+### Recent Updates (January 23, 2026)
+
+1. **Initial Setup** - Next.js frontend and Express backend
+2. **Design Implementation** - Scroll-snap sections, navigation, footer
+3. **Images Added** - Hero background and logo with white color filter
+4. **Navigation Refinement** - Logo repositioned to top left, buttons centered
+5. **Typography** - Merriweather font added for navigation
+6. **Layout Finalization** - Logo size increased, button positioning optimized
+
+---
+
 **Last Updated**: January 23, 2026
-**Version**: 1.0.0
+**Version**: 2.0.0 (Website Design Complete)
