@@ -1,26 +1,68 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Skogbunn Color Palette */
+  --forest-deep: #1a2418;
+  --moss-green: #2d3a28;
+  --bark-brown: #3d2e1f;
+  --chanterelle-gold: #c4913b;
+  --mist-grey: rgba(200, 210, 215, 0.3);
+  --twilight-blue: #4a5568;
+  --cream: #f5f0e8;
+
+  /* Primary colors for theme */
+  --background: var(--cream);
+  --foreground: var(--forest-deep);
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-forest-deep: var(--forest-deep);
+  --color-moss-green: var(--moss-green);
+  --color-bark-brown: var(--bark-brown);
+  --color-chanterelle-gold: var(--chanterelle-gold);
+  --color-mist-grey: var(--mist-grey);
+  --color-twilight-blue: var(--twilight-blue);
+  --color-cream: var(--cream);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+/* Scroll Snap Container */
+.scroll-container {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Scroll Snap Sections */
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Smooth scrolling for all elements */
+* {
+  scroll-behavior: smooth;
 }
