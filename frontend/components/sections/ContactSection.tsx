@@ -1,30 +1,42 @@
+import Image from 'next/image';
 import Footer from '../Footer';
 
 export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative w-full min-h-screen flex flex-col bg-moss-green"
+      className="relative w-full min-h-screen flex flex-col bg-moss-green overflow-hidden"
     >
-      <div className="flex-1 flex items-center justify-center px-6">
-        <div className="container mx-auto max-w-4xl">
-          <div className="text-center">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/hero-bg3.jpg"
+          alt="Skogbunn contact background"
+          fill
+          className="object-cover"
+          quality={90}
+        />
+      </div>
+
+      {/* Overlay for better contrast */}
+      <div className="absolute inset-0 bg-gradient-to-b from-moss-green/40 via-transparent to-moss-green/60" />
+
+      <div className="flex-1 flex items-end justify-start relative z-10" style={{ paddingBottom: '100px', paddingLeft: '100px' }}>
+        <div className="max-w-2xl">
+          <div className="text-left">
             <h2 className="text-4xl md:text-5xl font-merriweather font-light text-cream mb-8 tracking-wide">
               Kontakt
             </h2>
-            <div className="space-y-6 text-lg text-cream/90 leading-relaxed font-merriweather font-light">
+            <div className="space-y-4 text-lg leading-relaxed font-merriweather font-light text-cream/90">
               <p>
-                Ta gjerne kontakt for mer informasjon.
+                Mail: aasmund @ skogbunn.com
               </p>
-              {/* Contact information can be added here */}
-              <div className="mt-8 space-y-2">
-                <p className="text-chanterelle-gold">
-                  {/* Email placeholder */}
-                </p>
-                <p className="text-chanterelle-gold">
-                  {/* Phone placeholder */}
-                </p>
-              </div>
+              <p>
+                Telefon: 95 16 09 85
+              </p>
+              <p>
+                Adresse: Sørvaldveien 2A, 1923 Sørum
+              </p>
             </div>
           </div>
         </div>

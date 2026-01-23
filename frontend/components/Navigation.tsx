@@ -23,45 +23,38 @@ export default function Navigation() {
   };
 
   return (
-    <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-forest-deep/80 backdrop-blur-md' : 'bg-transparent'
-      }`}
-    >
-      <div className="w-full">
-        {/* Logo - Fixed top left corner with grey shadow */}
-        <div className="fixed top-6 left-6 z-50">
-          <div className="relative">
-            {/* Grey shadow behind logo */}
-            <div className="absolute inset-0 bg-gray-800/40 blur-xl rounded-lg" />
-            <Image
-              src="/images/logo.png"
-              alt="Skogbunn Mikromusheri"
-              width={6000}
-              height={1800}
-              className="h-96 w-auto brightness-0 invert relative z-10"
-              priority
-              style={{ filter: 'brightness(0) invert(1)', position: 'relative' }}
-            />
-          </div>
+    <div className="absolute top-0 left-0 right-0 z-[60]" style={{ position: 'absolute' }}>
+      <div className="w-full flex flex-col items-center">
+        {/* Logo - Centered at top, 30% larger */}
+        <div className="pt-4" style={{ width: '1170px', height: '351px' }}>
+          <Image
+            src="/images/logo.png"
+            alt="Skogbunn Mikromusheri"
+            fill
+            className="brightness-0 invert"
+            priority
+            style={{ filter: 'brightness(0) invert(1)', objectFit: 'contain' }}
+          />
         </div>
 
-        {/* Navigation Buttons - Centered, 50px lower, larger font */}
-        <div className="flex justify-center gap-8 pt-16" style={{ paddingTop: '62px' }}>
+        {/* Navigation Buttons - Centered below logo, closer to logo */}
+        <div className="flex justify-center gap-8 mt-2">
           <button
             onClick={() => scrollToSection('about')}
             className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-xl font-merriweather font-light"
+            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
           >
             Om Skogbunn
           </button>
           <button
             onClick={() => scrollToSection('contact')}
             className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-xl font-merriweather font-light"
+            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
           >
             Kontakt
           </button>
         </div>
       </div>
-    </nav>
+    </div>
   );
 }
