@@ -28,9 +28,6 @@ export default function HeroSection() {
         />
       </div>
 
-      {/* Overlay for better contrast and depth */}
-      <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/40 via-transparent to-forest-deep/60" />
-
       {/* Navigation - Logo and Buttons */}
       {/* Logo - Top left position */}
       <div className="absolute z-[60]" style={{ left: '50px', top: '50px' }}>
