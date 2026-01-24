@@ -17,9 +17,6 @@ export default function AboutSection() {
         />
       </div>
 
-      {/* Overlay for better contrast */}
-      <div className="absolute inset-0 bg-gradient-to-b from-bark-brown/40 via-transparent to-bark-brown/60" />
-
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center">
