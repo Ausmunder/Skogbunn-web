@@ -32,37 +32,37 @@ export default function HeroSection() {
       <div className="absolute inset-0 bg-gradient-to-b from-forest-deep/40 via-transparent to-forest-deep/60" />
 
       {/* Navigation - Logo and Buttons */}
-      <div className="absolute left-0 right-0 z-[60]" style={{ top: '30px' }}>
-        <div className="w-full flex flex-col items-center px-6">
-          {/* Logo - Centered at top, larger size */}
-          <div className="relative" style={{ width: '1000px', height: '300px', maxWidth: '90vw' }}>
-            <Image
-              src="/images/logo.png"
-              alt="Skogbunn Mikromusheri"
-              fill
-              className="brightness-0 invert"
-              priority
-              style={{ filter: 'brightness(0) invert(1)', objectFit: 'contain' }}
-            />
-          </div>
+      {/* Logo - Top left position */}
+      <div className="absolute z-[60]" style={{ left: '50px', top: '50px' }}>
+        <div className="relative" style={{ width: '800px', height: '240px' }}>
+          <Image
+            src="/images/logo.png"
+            alt="Skogbunn Mikromusheri"
+            fill
+            className="brightness-0 invert"
+            priority
+            style={{ filter: 'brightness(0) invert(1)', objectFit: 'contain' }}
+          />
+        </div>
+      </div>
 
-          {/* Navigation Buttons - Centered below logo, closer spacing */}
-          <div className="flex justify-center gap-8" style={{ marginTop: '30px' }}>
-            <button
-              onClick={() => scrollToSection('about')}
-              className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-2xl font-merriweather font-light px-4 py-2"
-              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
-            >
-              Om Skogbunn
-            </button>
-            <button
-              onClick={() => scrollToSection('contact')}
-              className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-2xl font-merriweather font-light px-4 py-2"
-              style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
-            >
-              Kontakt
-            </button>
-          </div>
+      {/* Navigation Buttons - Centered horizontally, 100px from top */}
+      <div className="absolute left-0 right-0 z-[60]" style={{ top: '100px' }}>
+        <div className="flex justify-center gap-8">
+          <button
+            onClick={() => scrollToSection('about')}
+            className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-2xl font-merriweather font-light px-4 py-2"
+            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+          >
+            Om Skogbunn
+          </button>
+          <button
+            onClick={() => scrollToSection('contact')}
+            className="text-cream hover:text-chanterelle-gold transition-colors duration-200 text-2xl font-merriweather font-light px-4 py-2"
+            style={{ textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)' }}
+          >
+            Kontakt
+          </button>
         </div>
       </div>
 
