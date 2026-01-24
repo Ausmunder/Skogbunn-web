@@ -9,7 +9,7 @@ export default function AboutSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/hero-bg2.png"
+          src="/images/hero-bg5.png"
           alt="Skogbunn background"
           fill
           className="object-cover"
