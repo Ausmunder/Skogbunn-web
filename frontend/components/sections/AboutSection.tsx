@@ -23,7 +23,7 @@ export default function AboutSection() {
       {/* Content */}
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center">
-          <h2 className="text-4xl md:text-5xl font-merriweather font-light text-cream tracking-wide" style={{ textShadow: '3px 3px 6px rgba(0, 0, 0, 0.9)', marginBottom: '100px' }}>
+          <h2 className="text-4xl md:text-5xl font-merriweather font-light text-cream tracking-wide" style={{ textShadow: '3px 3px 6px rgba(0, 0, 0, 0.9)', marginBottom: '50px' }}>
             Om Skogbunn
           </h2>
           <div className="space-y-6 text-lg text-cream/70 font-merriweather font-light">
