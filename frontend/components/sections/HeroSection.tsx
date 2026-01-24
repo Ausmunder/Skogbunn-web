@@ -34,7 +34,7 @@ export default function HeroSection() {
       {/* Navigation - Logo and Buttons */}
       {/* Logo - Top left position */}
       <div className="absolute z-[60]" style={{ left: '50px', top: '50px' }}>
-        <div className="relative" style={{ width: '800px', height: '240px' }}>
+        <div className="relative" style={{ width: '400px', height: '120px' }}>
           <Image
             src="/images/logo.png"
             alt="Skogbunn Mikromusheri"
