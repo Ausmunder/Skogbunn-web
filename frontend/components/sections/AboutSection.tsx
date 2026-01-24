@@ -26,16 +26,16 @@ export default function AboutSection() {
           </h2>
           <div className="space-y-6 text-lg text-cream font-merriweather font-light">
             <p style={{ textShadow: '3px 3px 6px rgba(0, 0, 0, 0.9)' }}>
-              Skogbunn Mikromusheri dyrker høykvalitets Østerssopp og Lions Mane på Vårum Gård i Sørum, med økologiske og kortreiste råvarer fra regionen.
+              Skogbunn Mikromusheri dyrker østerssopp og Lions Mane av høy kvalitet på Vårum Gård i Sørum, med økologiske og kortreiste råvarer fra nærområdet.
             </p>
             <p style={{ textShadow: '3px 3px 6px rgba(0, 0, 0, 0.9)' }}>
-              Substratet lager vi av halm fra gården, sagflis fra skogen og kaffegrut fra lokale kafeer.
+              Substratet lager vi selv, av halm fra gården, sagflis fra skogen rundt oss og kaffegrut samlet inn fra lokale kafeer.
             </p>
             <p style={{ textShadow: '3px 3px 6px rgba(0, 0, 0, 0.9)' }}>
-              Når soppen er høstet, går substratet tilbake til jorden som kompost, og ren energi fra solcellene på taket drifter produksjonen.
+              Vi holder karbonavtrykket lavt ved å gjenvinne brukt substrat som jordforbedring, og solcellene på taket leverer energien som holder produksjonen i gang.
             </p>
             <p style={{ textShadow: '3px 3px 6px rgba(0, 0, 0, 0.9)' }}>
-              Vi leverer fersk lokalprodusert sopp til restauranter, grossister og privatpersoner.
+              Vi leverer fersk, lokalprodusert sopp til restauranter, grossister og privatpersoner.
             </p>
           </div>
         </div>
