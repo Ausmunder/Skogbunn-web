@@ -14,6 +14,7 @@ export default function AboutSection() {
           fill
           className="object-cover"
           quality={90}
+          unoptimized
         />
       </div>
 
