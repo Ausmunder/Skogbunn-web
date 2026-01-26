@@ -29,7 +29,13 @@ export default function ContactSection() {
             </h2>
             <div className="space-y-4 text-lg leading-relaxed font-merriweather font-light text-cream/90">
               <p>
-                Mail: aasmund @ skogbunn.com
+                Skogbunn Mikromusheri AS
+              </p>
+              <p>
+                Org.nr: 936473806
+              </p>
+              <p>
+                Mail: aasmund@skogbunn.com
               </p>
               <p>
                 Telefon: 95 16 09 85
