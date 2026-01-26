@@ -43,7 +43,7 @@ export default function AboutSection() {
       {/* Content - Starts 20px below header */}
       <div className={`container mx-auto ${isMobile ? 'px-4' : 'px-6'} relative z-10`} style={{ paddingTop: isMobile ? 'calc(80px + 3rem + 20px)' : 'calc(100px + 3.75rem + 20px)' }}>
         <div className="text-center">
-          <div className="font-merriweather font-light text-cream" style={{ fontSize: isMobile ? '19px' : '21px', textShadow: '3px 3px 6px rgba(0, 0, 0, 0.9)', lineHeight: '1.8' }}>
+          <div className="font-merriweather font-light text-cream" style={{ fontSize: isMobile ? '17px' : '19px', textShadow: '3px 3px 6px rgba(0, 0, 0, 0.9)', lineHeight: '1.8' }}>
             <p>
               Skogbunn Mikromusheri dyrker østerssopp og Lions Mane av høy kvalitet<br />
               på Vårum Gård i Sørum, med økologiske og kortreiste råvarer fra nærområdet.
