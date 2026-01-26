@@ -1,18 +1,52 @@
-# Skogbunn Web
+# Skogbunn Mikromusheri - Website
 
-Modern web application for Skogbunn built with Next.js and Express.
+Modern, responsive website for Skogbunn Mikromusheri, a Norwegian mushroom farm specializing in oyster mushrooms and Lion's Mane cultivation.
+
+🌐 **Live Site**: [https://skogbunn.com](https://skogbunn.com)
+
+## Features
+
+- 🎨 **Modern Design** - Clean, minimalist aesthetic with forest-inspired color palette
+- 📱 **Fully Responsive** - Optimized for desktop, tablet, and mobile devices
+- ⚡ **Fast Performance** - Static site generation with Next.js
+- 🖼️ **Optimized Images** - Conditional mobile/desktop background images
+- 🔄 **Smooth Navigation** - Scroll-snap sections with smooth scrolling
+- 🌍 **Norwegian Language** - Native content in Norwegian
 
 ## Tech Stack
 
 ### Frontend
-- **Next.js 16** - React framework with App Router
+- **Next.js 14.2.18** - React framework with static export
+- **React 18** - Modern React with hooks
 - **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first CSS framework
+- **Tailwind CSS v4** - Utility-first CSS framework
+- **Merriweather Font** - Google Fonts typography
 
-### Backend
+### Backend (Optional)
 - **Express** - Node.js web framework
 - **TypeScript** - Type-safe API development
 - **CORS** - Cross-Origin Resource Sharing
+
+## Design System
+
+### Color Palette
+```css
+--forest-deep: #1a2418      /* Dark forest green */
+--moss-green: #2d3a28       /* Moss green */
+--bark-brown: #3d2e1f       /* Bark brown */
+--chanterelle-gold: #c4913b /* Mushroom gold */
+--cream: #f5f0e8            /* Light cream */
+```
+
+### Typography
+- **Primary Font**: Merriweather (Light 300, Regular 400, Bold 700)
+- **Desktop Headlines**: text-4xl to text-5xl
+- **Mobile Headlines**: text-3xl
+- **Body Text**: 19px desktop, 17px mobile
+
+### Responsive Breakpoints
+- **Mobile**: < 768px
+- **Desktop**: ≥ 768px
 
 ## Project Structure
 
@@ -63,17 +97,39 @@ The backend API will be available at `http://localhost:5000`
 
 ## Deployment
 
-The application is deployed to **skogbunn.com** with SSL/HTTPS enabled.
+The website is deployed to **skogbunn.com** as a static site.
 
-### Production URLs
-- Frontend: `https://skogbunn.com`
-- Backend API: `https://skogbunn.com/api`
+### Production URL
+- **Live Site**: `https://skogbunn.com`
+
+### Deployment Process
+
+1. **Build static export**:
+   ```bash
+   cd frontend
+   npm run build
+   ```
+   This generates a static site in the `out/` directory.
+
+2. **Deploy via SFTP**:
+   ```bash
+   cd frontend/out
+   sftp -i ~/.ssh/skogbunn_key skogbunn@skogbunn.com
+   cd www
+   put -r *
+   ```
 
 ### Server Architecture
-- Nginx reverse proxy handling HTTPS
-- SSL certificates via Let's Encrypt
-- Frontend on port 3000 (proxied)
-- Backend on port 5000 (proxied)
+- **Shared Hosting** - Web hotel with SFTP access
+- **SSL/HTTPS** - Automatically managed by hosting provider
+- **Static Files** - No Node.js runtime required
+- **Web Root**: `/www` directory
+
+### Mobile Optimization
+- Responsive design with mobile-first approach
+- Separate mobile background images (768x1024px portrait)
+- Conditional rendering based on viewport width (< 768px)
+- Optimized text sizes and spacing for mobile devices
 
 ## Environment Variables
 
