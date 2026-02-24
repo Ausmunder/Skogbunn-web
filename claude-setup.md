@@ -140,7 +140,7 @@ Since GitHub CLI (`gh`) is not available, follow these manual steps:
 1. Go to [github.com](https://github.com) and log in
    - **Username**: Ausmunder
    - **Email**: assmund@gmail.com
-   - **Password**: cB4C#544KadAbtR!
+   - **Password**: Wool8-Ravishing6-Rubble7-Transform4
 
 2. Click the **"+"** icon (top right) → **"New repository"**
 
@@ -493,14 +493,27 @@ git push origin master
 
 ## Changelog
 
+### 2026-02-24
+- GitHub password changed (old password removed from docs)
+- HA SSL access credentials changed
+- claude-setup.md updated with current component/image structure
+- About section desktop text size reduced: 19px → 15px
+- Deployed to skogbunn.com
+
+### 2026-01-23 — Website Complete (v2.0)
+- ✅ Static export configured and deployed to skogbunn.com
+- ✅ All sections implemented (Hero, About, Contact)
+- ✅ Contact info: Skogbunn Mikromusheri AS, org.nr, mail, phone, address
+- ✅ Mobile optimization: separate background images, responsive sizing
+- ✅ Favicon added
+- ✅ README updated with full documentation
+
 ### 2026-01-23 - Initial Setup
 - ✅ Project initialized with Next.js and Express
 - ✅ Git repository created
 - ✅ Server access verified (SFTP only)
 - ✅ SSL confirmed active
 - ✅ Documentation created
-- ⏳ GitHub repository pending creation
-- ⏳ First deployment pending
 
 ---
 
@@ -541,9 +554,11 @@ git push origin master
 - Monospace: Geist Mono
 
 **Images**:
-- Hero background: Beautiful oyster mushroom photo (`/images/hero-bg.png`)
-- Logo: Skogbunn Mikromusheri in stylish handwritten font (`/images/logo.png`)
-- Both optimized with Next.js Image component
+- Hero section: `/images/hero-bg.png` (desktop) / `/images/hero-bg-mobile.png` (mobile)
+- About section: `/images/hero-bg7.png` (desktop) / `/images/hero-bg2-mobile.png` (mobile)
+- Contact section: `/images/hero-bg3.jpg` (desktop) / `/images/hero-bg3-mobile.png` (mobile)
+- Logo: `/images/logo.png` (CSS white filter applied)
+- Favicon: `public/favicon.ico`
 
 #### Component Structure
 
@@ -554,16 +569,23 @@ frontend/
 │   ├── page.tsx            # Main page with all sections
 │   └── globals.css         # Global styles and color palette
 ├── components/
-│   ├── Navigation.tsx      # Sticky navigation with logo and buttons
 │   ├── Footer.tsx          # Footer with "skogbunn 2026"
 │   └── sections/
-│       ├── HeroSection.tsx     # Full-screen hero with background image
-│       ├── AboutSection.tsx    # About content section
-│       └── ContactSection.tsx  # Contact information section
+│       ├── HeroSection.tsx     # Full-screen hero, mobile/desktop bg, nav buttons at bottom
+│       ├── AboutSection.tsx    # About section, desktop shows text, mobile shows header only
+│       └── ContactSection.tsx  # Contact info (AS, org.nr, mail, phone, address) + footer
 └── public/
+    ├── favicon.ico
     └── images/
-        ├── hero-bg.png     # Oyster mushroom background
-        └── logo.png        # Skogbunn logo (converted to white via CSS)
+        ├── hero-bg.png         # Desktop hero bg
+        ├── hero-bg-mobile.png  # Mobile hero bg
+        ├── hero-bg2.png        # (spare)
+        ├── hero-bg2-mobile.png # Mobile about bg
+        ├── hero-bg3.jpg        # Desktop contact bg
+        ├── hero-bg3-mobile.png # Mobile contact bg
+        ├── hero-bg6.png        # (spare)
+        ├── hero-bg7.png        # Desktop about bg
+        └── logo.png            # Skogbunn logo (CSS white filter)
 ```
 
 #### Technical Implementation
@@ -615,29 +637,43 @@ npx serve out
 
 ### Current Status
 
-- ✅ Project initialized with Next.js 16 and Express
+- ✅ Project initialized with Next.js and Express
 - ✅ Git repository created and configured
-- ✅ GitHub repository created: `https://github.com/Ausmunder/Skogbunn-web`
-- ✅ All commits pushed to GitHub
-- ✅ Server access verified (SFTP only)
-- ✅ SSL confirmed active
-- ✅ Website design fully implemented
-- ✅ Images added (hero background and logo)
-- ✅ Navigation fully functional with scroll-to-section
-- ✅ Color palette and typography configured
-- ⏳ Content for About and Contact sections pending
-- ⏳ First deployment to skogbunn.com pending
+- ✅ GitHub repository: `https://github.com/Ausmunder/Skogbunn-web`
+- ✅ Server access verified (SFTP only, shared hosting)
+- ✅ SSL active (managed by hosting provider)
+- ✅ Website fully implemented and deployed to skogbunn.com
+- ✅ Static export (Next.js `output: 'export'`) working
+- ✅ Mobile optimization complete (separate mobile backgrounds, responsive layout)
+- ✅ Contact info populated (AS, org.nr, mail, phone, address)
+- ✅ Favicon added
+- ✅ About section content filled in (Norwegian text, desktop only)
+- ✅ About section text size: 15px desktop
+- ✅ All changes committed and pushed to GitHub
 
-### Recent Updates (January 23, 2026)
+### Recent Updates
 
-1. **Initial Setup** - Next.js frontend and Express backend
-2. **Design Implementation** - Scroll-snap sections, navigation, footer
-3. **Images Added** - Hero background and logo with white color filter
-4. **Navigation Refinement** - Logo repositioned to top left, buttons centered
-5. **Typography** - Merriweather font added for navigation
-6. **Layout Finalization** - Logo size increased, button positioning optimized
+#### 2026-02-24
+- GitHub password changed (credentials updated in this doc)
+- HA SSL access changed
+
+#### 2026-01 — 2026-02 (commits ca1f4ae → bbfd3b3)
+1. **Static export fix** (`ca1f4ae`) — `output: 'export'` configured, build working
+2. **Contact info** (`c76cf58`) — Added company name, org.nr, email, phone, address
+3. **Mobile optimization** (`fb4c2d9`) — Separate mobile bg images, responsive padding/font sizes
+4. **About text size** (`5ecd82f`) — Font size adjusted to 19px desktop
+5. **README updated** (`bbfd3b3`) — Comprehensive documentation
+6. **New images** — hero-bg2-mobile.png, hero-bg6.png, hero-bg7.png added
+7. **Favicon** — Added to public/
+
+#### January 23, 2026 — Initial build
+1. Next.js frontend and Express backend setup
+2. Scroll-snap sections (Hero, About, Contact)
+3. Skogbunn color palette and Merriweather typography
+4. Logo (top centered, white CSS filter), nav buttons at bottom of hero
+5. Hero background image with mobile/desktop variants
 
 ---
 
-**Last Updated**: January 23, 2026
-**Version**: 2.0.0 (Website Design Complete)
+**Last Updated**: 2026-02-24
+**Version**: 2.1.0

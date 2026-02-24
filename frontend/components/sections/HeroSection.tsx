@@ -58,7 +58,7 @@ export default function HeroSection() {
       </div>
 
       {/* Navigation Buttons - Bottom position */}
-      <div className="absolute left-0 right-0 bottom-0 z-[60]" style={{ paddingBottom: isMobile ? '60px' : '100px' }}>
+      <div className="absolute left-0 right-0 bottom-0 z-[60]" style={{ paddingBottom: isMobile ? '170px' : '100px' }}>
         <div className={`flex justify-center ${isMobile ? 'gap-4' : 'gap-8'}`}>
           <button
             onClick={() => scrollToSection('about')}

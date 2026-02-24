@@ -36,7 +36,7 @@ export default function ContactSection() {
       <div
         className="flex-1 flex items-end justify-start relative z-10"
         style={{
-          paddingBottom: isMobile ? '70px' : '110px',
+          paddingBottom: isMobile ? '170px' : '110px',
           paddingLeft: isMobile ? '20px' : '100px'
         }}
       >
